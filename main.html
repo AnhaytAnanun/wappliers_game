@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Wappliers</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./scene.js"></script>
+</head>
+
+<body>
+
+    <div class="center_element">
+        <div id="resources_text">Food: 3    Water: 3    </div>
+        <div id="scene_text">
+        As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+        </div>
+        <button id="button1" onclick="onChoice('button1')">Button 1</button>
+        <button id="button2" onclick="onChoice('button2')">Button 2</button>
+        <button id="button3" onclick="onChoice('button3')">Button 3</button>
+    </div>
+    <canvas id="canvas">
+    </canvas class="center_element">
+
+    <script>
+    (function() {
+        var htmlCanvas = $('#canvas')[0];
+        var context = htmlCanvas.getContext('2d');
+
+        setScene();
+    })();
+
+    </script>
+
+</body> 
+
+</html>
