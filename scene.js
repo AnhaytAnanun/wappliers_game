@@ -336,6 +336,50 @@ function setScene() {
 		$('#button2').hide();
 		$('#button3').hide();		
 	}
+
+	// DEAD AFTER SNEAKING INTO OUTLAW CAMP, SCENE 204
+
+	if (currentScene == 204) {
+		$('#scene_text').text(
+			'The Prophet shoot the door down. ' +
+			'"You did not pass my probation", The Prophet said, "So I will lock you here." ' +
+			'You wondered the maze until you starved to the death.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// GAME OUTCOME FOR MAZE, SCENE 300
+
+	if (currentScene == 300) {
+		$('#scene_text').text(
+			'The prophet is pleased that you made it out of the maze. ' +
+			'"You did pass my probation", The Prophet said, "So I will award you with this time capsule. Take it to your elders, it contains valuable information."'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Proceed.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// GAME PREPHASE
+
+	if (currentScene == 400) {
+		$('#scene_text').text(
+			'You wake up laying on a stone floor in some kind of maze. ' + 
+			'The Prophet\'s voice announces that the exit from maze will be shut down soon and you need to get out as soon as you can if you want his help on your quest. ' +
+			'Use your keyboard arrows to direct in the maze. You will have 60 seconds to escape it.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Proceed.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
 }
 
 function onChoice(button) {
@@ -550,8 +594,7 @@ function onChoice(button) {
 
 	else if (currentScene == 16) {
 		if (button == 'button1') {
-			mazeRunning = true;
-	        $('#maze_element').show();
+			currentScene = 400;
 		} else if (button == 'button2') {
 			currentScene = 17;
 		}
@@ -597,6 +640,17 @@ function onChoice(button) {
 		}
 	}
 
+	// Game scenes
+
+	else if (currentScene == 400) {
+		startMaze();
+	}
+
+	else if (currentScene == 300) {
+		timeCapsule = true;
+		currentScene = 17;
+	}
+
 	// Replay Scenes
 
 	else if (currentScene > 99) {
@@ -624,6 +678,7 @@ function onChoice(button) {
 
 		currentScene = 1;
 	}
+
 
 	setScene();
 }

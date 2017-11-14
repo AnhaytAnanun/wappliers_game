@@ -1,5 +1,9 @@
 var mazeRunning = false;
+var timerRuning = false;
+var countdown = 60;
+var tid;
 
+$('#timer').hide();
 
 
 var MAN_COLOUR = "#FF9020";
@@ -8,7 +12,7 @@ var TRAIL_COLOUR = "#AA5020";
 
 var GOAL_COLOUR = "#22FF22";
 
-var BACKGROUND_COLOUR = "#0085FF";
+var BACKGROUND_COLOUR = "#000515";
 
 var WALL_COLOUR = "#440944";
 
@@ -44,5 +48,47 @@ function globalPageLoaded() {
 }
 
 function wonMaze() {
-    alert('Kinda works');
+    currentScene = 300;
+    setScene();
+
+    stopMaze();
+}
+
+function startMaze() {
+    countdown = 60;
+
+    mazeRunning = true;
+    $('#maze_element').show();
+    $('#center_element').hide();
+
+    $('#timer').text(countdown);
+
+    $('#timer').show();
+
+    tid = setInterval(runTime, 1000);
+}
+
+function stopMaze() {
+    $('#timer').hide();
+
+    clearInterval(tid);
+
+    mazeRunning = true;
+    $('#maze_element').hide();
+    $('#center_element').show();
+
+    $('#timer').hide();   
+}
+
+function runTime() {
+    countdown--;
+
+    $('#timer').text(countdown);
+
+    if (countdown == 0) {
+        currentScene = 204;
+        setScene();
+
+        stopMaze();
+    }
 }
