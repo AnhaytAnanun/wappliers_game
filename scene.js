@@ -1,15 +1,24 @@
-var currentScene = 1;
+var currentScene = 16;
 var food = 3;
 var water = 3;
-var leftHorse = false;
 var hasHorse = false;
-var hadHorse = false;
+
 var collectedBerries = false;
+var leftHorse = false;
+
 var buriedScientist = false;
 var markedScientist = false;
-var pipesDiagram = false;
+
 var stolenPipesDiagram = false;
+var hadHorse = false;
+
 var toldStory = false;
+
+var pipesDiagram = false;
+var waterResource = false;
+var treatmentTechnology = false;
+var storageTechnology = false;
+var timeCapsule = false;
 
 function setScene() {
 
@@ -197,14 +206,13 @@ function setScene() {
 
 	if (currentScene == 13) {
 		$('#scene_text').text(
-			'You got lost, but hopefuly you met a ranger that agreees to help you.' +
-			'You are walking takling about different things. Do you want to tell him of your quest, too?'
+			'Campfire.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Keep Silence.');
+		$('#button1').text('Harm yourself.');
 		$('#button2').show();
-		$('#button2').text('Tell Story.');
+		$('#button2').text('Offer food.');
 		$('#button3').hide();
 	}
 
@@ -221,6 +229,113 @@ function setScene() {
 		$('#button2').text('Leave.');
 		$('#button3').hide();
 	}
+
+	// SCENE 17
+
+	if (currentScene == 17) {
+		$('#scene_text').text(
+			'Woman is collecting barries.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Help.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// SCENE 18
+
+	if (currentScene == 18) {
+		$('#scene_text').text(
+			'Bloody scientist shirt. Wanna talk about that?'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Yes.');
+		$('#button2').show();
+		$('#button2').text('No.');
+		$('#button3').hide();
+	}
+
+	// OUTCOME ONE, SCENE 100
+
+	if (currentScene == 100) {
+		$('#scene_text').text(
+			'You return home. You have water this day, you know you will have it tomorrow. ' +
+			'But your society does not have infinite water sources, they are not even hufe. ' +
+			'Sooner or later, your or your children\'s lifes will go literally dry. ' +
+			'So enjoy your water while you have it.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// DEAD FROM SERPENT, SCENE 200
+
+	if (currentScene == 200) {
+		$('#scene_text').text(
+			'You battled for a couple of hours. ' +
+			'You tried your best, but the serpent was faster and it was able to bite you grievously. ' +
+			'You died knowing that not only you failed your people, but also your corpse will digest in serpent\'s stomach for a month. '
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+
+	// DEAD AFTER FIGHT BECAUSE OUTLOWS DID NOT FIND WATER, SCENE 201
+
+	if (currentScene == 201) {
+		$('#scene_text').text(
+			'You tried to fight back, but there where too many of them. ' +
+			'Eventually, outlaws overthrew and got hands on your bag. ' +
+			'To their displease, they did not found water, their main interest. ' +
+			'Ravaging from dissapointment, they killed you.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// DEAD AFTER FAILED ESCAPE BECAUSE OUTLOWS DID NOT FIND WATER, SCENE 202
+
+	if (currentScene == 202) {
+		$('#scene_text').text(
+			'You tried to run away, but there where too many of them. ' +
+			'Eventually, outlaws overthrew and got hands on your bag. ' +
+			'To their displease, they did not found water, their main interest. ' +
+			'Ravaging from dissapointment, they killed you.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+
+	// DEAD AFTER SNEAKING INTO OUTLAW CAMP, SCENE 203
+
+	if (currentScene == 203) {
+		$('#scene_text').text(
+			'You tried to sneak into outlaw camp. ' +
+			'Your wounds made it hard for you to move like shadow like you used to. ' +
+			'You where noticed by camp watchman and shot down. '
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
 }
 
 function onChoice(button) {
@@ -232,7 +347,7 @@ function onChoice(button) {
 		if (button == 'button1') {
 			currentScene = 2;
 		} else if (button == 'button2') {
-			//TODO: Dead Scene
+			currentScene = 100;
 		}
 	}
 
@@ -281,7 +396,7 @@ function onChoice(button) {
 			if (hasHorse) {
 				currentScene = 8;
 			} else {
-				//TODO: Dead Scene
+				currentScene = 200;
 			}
 		} else if (button == 'button2') {
 			food = 0;
@@ -356,7 +471,7 @@ function onChoice(button) {
 				currentScene = 12;
 			} else {
 				if (water == 0) {
-					//TODO: Dead Scene
+					currentScene = 201;
 				} else {
 					water = 0;
 					food = 0;
@@ -365,7 +480,7 @@ function onChoice(button) {
 			}
 		} else if (button == 'button2') {
 			if (water == 0) {
-				//TODO: Dead Scene
+				currentScene = 202;
 			} else {
 				water = 0;
 				food = 0;
@@ -403,7 +518,7 @@ function onChoice(button) {
 					hasHorse = true;
 				}
 			} else {
-				//TODO: Dead Scene
+				currentScene = 203;
 			}
 		} else if (button == 'button2') {
 			currentScene = 12;
@@ -413,24 +528,21 @@ function onChoice(button) {
 	// SCENE 12
 
 	else if (currentScene == 12) {
-		if (button == 'button2') {
+		if (button == 'button1') {
+		} else if (button == 'button2') {
 			toldStory = true;
 		}
 
-		if (water > 0 && food > 0) {
-			currentScene = 13;
-		} else {
-			//TODO: Excessive Use Ending
-		}
+		currentScene = 13;
 	}
 
 	// SCENE 13
 
 	else if (currentScene == 13) {
 		if (button == 'button1') {
-			currentScene = 16;
-		} else if (button == 'button2') {
 			//TODO: Excessive Use Ending
+		} else if (button == 'button2') {
+			currentScene = 16;
 		}
 	}
 
@@ -438,10 +550,79 @@ function onChoice(button) {
 
 	else if (currentScene == 16) {
 		if (button == 'button1') {
-			//TODO: Maze Minigame
+			mazeRunning = true;
+	        $('#maze_element').show();
 		} else if (button == 'button2') {
 			currentScene = 17;
 		}
+	}
+
+	// SCENE 17
+
+	else if (currentScene == 17) {
+		if (button == 'button1') {
+			//TODO: Barry Collecting Game
+		} else if (button == 'button2') {
+			currentScene = 19;
+		}
+	}
+
+	// SCENE 18
+
+	else if (currentScene == 18) {
+		if (button == 'button1') {
+			if (buriedScientist) {
+				storageTechnology = true;
+			}
+
+			currentScene = 19;
+		} else if (button == 'button2') {
+			currentScene = 19;
+		}
+	}
+
+	// SCENE 19
+
+	else if (currentScene == 19) {
+		if (button == 'button1') {
+			if (leftHorse == true) {
+				//TODO: Dead Scene: Wolf Attack
+			} else {
+				if (buriedScientist == false) {
+					currentScene == 21;
+				}
+			}
+		} else if (button == 'button2') {
+
+		}
+	}
+
+	// Replay Scenes
+
+	else if (currentScene > 99) {
+		currentScene = 1;
+		food = 3;
+		water = 3;
+		hasHorse = false;
+
+		collectedBerries = false;
+		leftHorse = false;
+
+		buriedScientist = false;
+		markedScientist = false;
+
+		stolenPipesDiagram = false;
+		hadHorse = false;
+
+		toldStory = false;
+
+		pipesDiagram = false;
+		waterResource = false;
+		treatmentTechnology = false;
+		storageTechnology = false;
+		timeCapsule = false;
+
+		currentScene = 1;
 	}
 
 	setScene();
