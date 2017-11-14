@@ -7,6 +7,9 @@ var hadHorse = false;
 var collectedBerries = false;
 var buriedScientist = false;
 var markedScientist = false;
+var pipesDiagram = false;
+var stolenPipesDiagram = false;
+var toldStory = false;
 
 function setScene() {
 
@@ -175,6 +178,49 @@ function setScene() {
 		$('#button3').hide();
 	}
 
+	// SCENE 12
+
+	if (currentScene == 12) {
+		$('#scene_text').text(
+			'You got lost, but hopefuly you met a ranger that agreees to help you.' +
+			'You are walking takling about different things. Do you want to tell him of your quest, too?'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Keep Silence.');
+		$('#button2').show();
+		$('#button2').text('Tell Story.');
+		$('#button3').hide();
+	}
+
+	// SCENE 13
+
+	if (currentScene == 13) {
+		$('#scene_text').text(
+			'You got lost, but hopefuly you met a ranger that agreees to help you.' +
+			'You are walking takling about different things. Do you want to tell him of your quest, too?'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Keep Silence.');
+		$('#button2').show();
+		$('#button2').text('Tell Story.');
+		$('#button3').hide();
+	}
+
+	// SCENE 16
+
+	if (currentScene == 16) {
+		$('#scene_text').text(
+			'You met prophet. Do you want follow him?'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Follow.');
+		$('#button2').show();
+		$('#button2').text('Leave.');
+		$('#button3').hide();
+	}
 }
 
 function onChoice(button) {
@@ -289,10 +335,12 @@ function onChoice(button) {
 
 	else if (currentScene == 9) {
 		if (button == 'button1') {
+			pipesDiagram = true;
 			buriedScientist = true;
 			markedScientist = true;
 			currentScene = 10;
 		} else if (button == 'button2') {
+			pipesDiagram = true;
 			buriedScientist = true;
 			currentScene = 10;
 		} else if (button == 'button3') {
@@ -328,6 +376,12 @@ function onChoice(button) {
 				}
 
 				hasHorse = false;
+
+				if (pipesDiagram) {
+					stolenPipesDiagram = true;
+				}
+
+				pipesDiagram = false;
 			}
 		}
 	}
@@ -336,9 +390,57 @@ function onChoice(button) {
 
 	else if (currentScene == 11) {
 		if (button == 'button1') {
+			if (collectedBerries) {
+				food = 2;
+				water = 2;
+				currentScene = 12;
 
+				if (stolenPipesDiagram) {
+					pipesDiagram = true;
+				}
+
+				if (hadHorse) {
+					hasHorse = true;
+				}
+			} else {
+				//TODO: Dead Scene
+			}
 		} else if (button == 'button2') {
+			currentScene = 12;
+		}
+	}
 
+	// SCENE 12
+
+	else if (currentScene == 12) {
+		if (button == 'button2') {
+			toldStory = true;
+		}
+
+		if (water > 0 && food > 0) {
+			currentScene = 13;
+		} else {
+			//TODO: Excessive Use Ending
+		}
+	}
+
+	// SCENE 13
+
+	else if (currentScene == 13) {
+		if (button == 'button1') {
+			currentScene = 16;
+		} else if (button == 'button2') {
+			//TODO: Excessive Use Ending
+		}
+	}
+
+	// SCENE 16
+
+	else if (currentScene == 16) {
+		if (button == 'button1') {
+			//TODO: Maze Minigame
+		} else if (button == 'button2') {
+			currentScene = 17;
 		}
 	}
 
