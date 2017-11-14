@@ -1,4 +1,4 @@
-var currentScene = 16;
+var currentScene = 1;
 var food = 3;
 var water = 3;
 var hasHorse = false;
@@ -28,11 +28,11 @@ function setScene() {
 
 	if (currentScene == 1) {
 		$('#scene_text').text(
-		'Welcome adventurer! You have chosen by the elder council to help our community.' +
-		'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water.' +
-		'Our ancestors were not that wise to use water cautiously and now we have very little left.' + 
-		'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water.' + 
-		'We are begging you to search for new water resources and for tools and data that might help to construct water treatment infrastructure.' + 
+		'Welcome adventurer! You have chosen by the elder council to help our community. ' +
+		'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water. ' +
+		'Our ancestors were not that wise to use water cautiously and now we have very little left. ' + 
+		'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water. ' + 
+		'We are begging you to search for new water resources and for tools and data that might help to construct water treatment infrastructure. ' + 
 		'But please hurry! We are running out of water!'
 		);
 
@@ -48,7 +48,8 @@ function setScene() {
 	if (currentScene == 2) {
 		$('#scene_text').text(
 			'You entered waistland praires. It is a dangerous place, but you hope to find some abandoned mechanisms or tools or documentation' +
-			'that might help. After a while of traveling, you happen a horse, laying on the ground, ill.'
+			'that might help. After a while of traveling, you happen a horse, laying on the ground. ' +
+			'It seems to be exhasted and starving, you can see its rib bones under skin.'
 		);
 
 		$('#button1').show();
@@ -62,13 +63,15 @@ function setScene() {
 
 	if (currentScene == 3) {
 		$('#scene_text').text(
-			'Horse is cured! Do you want to keep it for yourself?'
+			'After some eating and drinking, the horse was able to stand on its 4 legs with a bit of your help. ' +
+			'It seem quite happy, even trying to run around. ' +
+			'You now you noticed that there is no bridle and no sign of its wearing on cheecks and tooth.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Keep it.');
+		$('#button1').text('I saved this horse, so it mine now.');
 		$('#button2').show();
-		$('#button2').text('Let it go.');
+		$('#button2').text('Let it go. She belongs to nature.');
 		$('#button3').hide();
 	}
 
@@ -76,13 +79,16 @@ function setScene() {
 
 	if (currentScene == 4) {
 		$('#scene_text').text(
-			'Acid rain starts. You see a shelter nearby. Do you want to hide there, or you will continue walking?'
+			'You continue your journey. The sky above slowly turns grey, covering with heavy, strange shaped clouds until there is no free spot left. ' +
+			'On the edge of the horizon, you see grey building, remnants of some old factory or scientific plant. ' +
+			'You never now what awaits you there, it may be fascinating technologies as well as monsters and outlaws, both deadly to meet. ' +
+			'Rain starts. Its acid rain.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Continue walking.');
+		$('#button1').text('Continue walking, you have special hood to cover yourself.');
 		$('#button2').show();
-		$('#button2').text('Hide in shelter.');
+		$('#button2').text('Hide in the closest of buildings.');
 		$('#button3').hide();
 	}
 
@@ -90,13 +96,15 @@ function setScene() {
 
 	if (currentScene == 5) {
 		$('#scene_text').text(
-			'At the morning, you found whos shelter this was. A giant serpent\'s!'
+			'You sleep well during the night, listening the rythmic drops of the rain and wind. ' +
+			'At the morning, you attempted to make some breakfest, but was interrupted by strange sounds from outside. ' +
+			'A serpent-like mutant ambushes you.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Fight.');
+		$('#button1').text('Fight. Mutants must die!');
 		$('#button2').show();
-		$('#button2').text('Run.');
+		$('#button2').text('Run. You must not risk yourself.');
 		$('#button3').hide();
 	}
 
@@ -105,14 +113,14 @@ function setScene() {
 	if (currentScene == 6) {
 		$('#scene_text').text(
 			'You put on your hood and continue your way. Suddenly, you heard how a heavy object falls down into a mud.' +  
-			'You turn around to find your horse collapsed - the acid rain was the last drop of infortune this poor being could bear.' + 
-			'Would you like to try and cure the horse?.'
+			'You turn around to find your horse collapsed - the acid rain was too much for this poor being.' + 
+			'Would you like to try and help the horse?.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Cure.');
+		$('#button1').text('Help the horse.');
 		$('#button2').show();
-		$('#button2').text('Leave.');
+		$('#button2').text('Leave it, there is no place for weak creatures in wastelands.');
 		$('#button3').hide();
 	}
 
@@ -120,13 +128,15 @@ function setScene() {
 
 	if (currentScene == 7) {
 		$('#scene_text').text(
-			'Horse is dead. Do you like to burry it?'
+			'You covered the horse with an extra hood, gave in food and water, but its state seems to warsen. ' +
+			'It passes away, looking straight into your eyes with dignity. ' +
+			'Would you like tu bury the corpse?'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Yes.');
+		$('#button1').text('Yes, that will be a human act.');
 		$('#button2').show();
-		$('#button2').text('Leave.');
+		$('#button2').text('Leave it, let the nature take what belongs to it.');
 		$('#button3').hide();
 	}
 
@@ -134,13 +144,15 @@ function setScene() {
 
 	if (currentScene == 8) {
 		$('#scene_text').text(
-			'You found some berries. Do you want to collect them for future use?'
+			'Even that rain was an acid one, it is fresh and beautiful outside. ' +
+			'Small water drops cover grass and rare bushes. Deadly drops. ' +
+			'You notice a bush of Klyukva, a rare and tasty berry.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Yes.');
+		$('#button1').text('Collect it to refill food resources.');
 		$('#button2').show();
-		$('#button2').text('No.');
+		$('#button2').text('Leave it by.');
 		$('#button3').hide();
 	}
 
@@ -148,28 +160,29 @@ function setScene() {
 
 	if (currentScene == 9) {
 		$('#scene_text').text(
-			'You found a corpse of a dead scientist. Want do you want to do?'
+			'A blink of light not far away catches you attention. You followed the bling to find a pare of glasses on the ground, ' +
+			'and a corpse of a man in lab coat neaby.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Burry and Mark.');
+		$('#button1').text('Burry the corpse and mark the grave.');
 		$('#button2').show();
-		$('#button2').text('Bury.');
+		$('#button2').text('Just bury the corpse.');
 		$('#button3').show();
-		$('#button3').text('Leave.');
+		$('#button3').text('Leave it as is.');
 	}
 
 	// SCENE 10
 
 	if (currentScene == 10) {
 		$('#scene_text').text(
-			'You are surrounded by outlaws.'
+			'You were surrounded by outlaws. This are harsh men of the wastelands, they only value brute force and water.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Break out.');
+		$('#button1').text('Try to escape.');
 		$('#button2').show();
-		$('#button2').text('Fight.');
+		$('#button2').text('Fight them.');
 		$('#button3').hide();
 	}
 
@@ -177,11 +190,12 @@ function setScene() {
 
 	if (currentScene == 11) {
 		$('#scene_text').text(
-			'You lost the fight and was heavily beater. Would you like to return to the camp and take a revenge?'
+			'You lost the fight and was heavily beaten. Now you can find the foorptints of outlaws on the ground. ' + 
+			'Would you like to return to follow them and take revenge?'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Take revenge.');
+		$('#button1').text('Follow and take revenge.');
 		$('#button2').show();
 		$('#button2').text('Continue.');
 		$('#button3').hide();
@@ -191,14 +205,14 @@ function setScene() {
 
 	if (currentScene == 12) {
 		$('#scene_text').text(
-			'You got lost, but hopefuly you met a ranger that agreees to help you.' +
-			'You are walking takling about different things. Do you want to tell him of your quest, too?'
+			'After encounter with outlaws, you got lost. Hopefuly you met a ranger that agreees to help you.' +
+			'You are walking and takling about different subjects now. Do you want to tell him of your quest, too?'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Keep Silence.');
+		$('#button1').text('Keep silence. No one can be trusted in the wastelands, moreover those kind to you.');
 		$('#button2').show();
-		$('#button2').text('Tell Story.');
+		$('#button2').text('Tell story. This man is kind to you, after all.');
 		$('#button3').hide();
 	}
 
@@ -206,11 +220,11 @@ function setScene() {
 
 	if (currentScene == 13) {
 		$('#scene_text').text(
-			'Campfire.'
+			'You made a small campfire. The Ranger is offered some of his food to you. Do you also like to offer some food?'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Harm yourself.');
+		$('#button1').text('Keep your food. You have long journey to go still.');
 		$('#button2').show();
 		$('#button2').text('Offer food.');
 		$('#button3').hide();
@@ -220,13 +234,14 @@ function setScene() {
 
 	if (currentScene == 16) {
 		$('#scene_text').text(
-			'You met prophet. Do you want follow him?'
+			'You found prophet\'s cave high in the mountains. He greeted you by name and asked if you would like to take a tour into deep of the cave. '
+			+ 'He promises to show something really valuable for you.'
 		);
 
 		$('#button1').show();
-		$('#button1').text('Follow.');
+		$('#button1').text('Follow. This man may have something really interesting.');
 		$('#button2').show();
-		$('#button2').text('Leave.');
+		$('#button2').text('Leave prophet\'s cave. You can\'t risk your life by trusting some madman.');
 		$('#button3').hide();
 	}
 
@@ -234,12 +249,13 @@ function setScene() {
 
 	if (currentScene == 17) {
 		$('#scene_text').text(
-			'Woman is collecting barries.'
+			'You arrived at widow\'s house. She is outside, struggling to collect some apricots from a big tree. '
 		);
 
 		$('#button1').show();
-		$('#button1').text('Help.');
-		$('#button2').hide();
+		$('#button1').text('Help her.');
+		$('#button2').show();
+		$('#button2').text('Do not help.');
 		$('#button3').hide();
 	}
 
@@ -247,7 +263,8 @@ function setScene() {
 
 	if (currentScene == 18) {
 		$('#scene_text').text(
-			'Bloody scientist shirt. Wanna talk about that?'
+			'Widow is pleased by your act and tells you location of secret springs she takes water from. She also asks if you would like to rest at her house. You gladly accept. Inside, you noticed a bloody lab coat hanging on a chair. '
+			+ 'Will you tell widow about your encounter with scientist corpse?'
 		);
 
 		$('#button1').show();
@@ -255,6 +272,163 @@ function setScene() {
 		$('#button2').show();
 		$('#button2').text('No.');
 		$('#button3').hide();
+	}
+
+	// SCENE 19
+
+	if (currentScene == 19) {
+		$('#scene_text').text(
+			'Something seems suspicious with the scientist corpse you left behind. Do you want to return to it?'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Yes.');
+		$('#button2').show();
+		$('#button2').text('No.');
+		$('#button3').hide();
+	}
+
+	// SCENE 20
+
+	if (currentScene == 20) {
+		var text = '';
+		var missed = false;
+
+		if (markedScientist) {
+			if (toldStory) {
+				missed = true;
+				text = 'You found the grave open and the corpse stripped and examined. You also notice footprints that look like ones from ranger\'s boots.';
+			} else {
+				missed = true;
+				text = 'The grave was opened by outlaws. The corpse was burnt down. Noting to search here anymore.';
+			}
+		}
+
+		if (!buriedScientist) {
+			missed = true;
+			text = 'Wolves made their way with the corpse. Nothing to search for here anymore.'
+		}
+
+		if (!missed) {
+			storageTechnology = true;
+			text = 'You opened the grave and examined the corpse. You found another book about water storage facilities';
+		}
+
+		$('#scene_text').text(
+			text
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}	
+
+	// SCENE 22
+
+	if (currentScene == 22) {
+		$('#scene_text').text(
+			'It was not easy to bury the horse. You tired a lot and consumed some extra food and water.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// SCENE 23
+
+	if (currentScene == 23) {
+		$('#scene_text').text(
+			'When you lifted the corpse to place it into the grave, some papers fell down from its pockets. ' +
+			'You examined them, they appear to be some directions on how to properly produce and construct pipes ' +
+			'and delivery routes for water.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// SCENE 24
+
+	if (currentScene == 24) {
+		$('#scene_text').text(
+			'You found the outlaw camp and scneak it easily despite your wounds. ' +
+			'There was no one alive at the camp - they all died from tasting the Klyukva berries which appear to absorb the poison from acid rain.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// SCENE 25
+
+	if (currentScene == 25) {
+		$('#scene_text').text(
+			'Ranger is pleased by your kind act. It return he tells you of a prophet and a widow that leave in the highlands and can be of help.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// SCENE 26
+
+	if (currentScene == 26) {
+		$('#scene_text').text(
+			'You part ways with ranger next day. After some wondering, you found springs and return to your people glad of yourself.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// SCENE 27
+
+	if (currentScene == 27) {
+		$('#scene_text').text(
+			'You watched as widow was collecting her fruits. Afterwards, widow do not respond to your attempts of communication.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// SCENE 28
+
+	if (currentScene == 28) {
+		$('#scene_text').text(
+			'Widow is pleased by your act of respect to her late husband. She grants you with book about water treatment technology.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	// SCENE 29
+
+	if (currentScene == 29) {
+		$('#scene_text').text(
+			'Widow is angread that you did not bury her husband. You retreated from her house, ashamed.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Continue.');
+		$('#button2').hide();
+		$('#button3').hide();		
 	}
 
 	// OUTCOME ONE, SCENE 100
@@ -265,6 +439,44 @@ function setScene() {
 			'But your society does not have infinite water sources, they are not even hufe. ' +
 			'Sooner or later, your or your children\'s lifes will go literally dry. ' +
 			'So enjoy your water while you have it.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	if (currentScene == 101) {
+		var text = 'You have successfully located springs that can be used as water resources. ';
+
+		if (pipesDiagram) {
+			text = 'You also found diagrams of how to construct water delivery routes, so you now can efficiently deliver water to consumers. ';
+		} else {
+			text = 'Still, delivering water to consmers is a problem as you don\'t know how to construct delivery system efficiently';
+		}
+
+		if (treatmentTechnology) {
+			text = 'You also found diagrams of how to construct water treatment facilities, so you now can purify a lot of water besides those in springs and are less affected by environment changes. ';
+		} else {
+			text = 'Still, purifying water is a problem as you don\'t know how to construct treatment facilities efficiently. Your society is exposed to environment changes. ';			
+		}
+
+		if (storageTechnology) {
+			text = 'You also found diagrams of how to construct water storages, so you now can efficiently store water for hard times. ';			
+		} else {
+			text = 'Still, storing water is a problem as you don\'t know how to construct storages efficiently. Your society is exposed to environment changes. ';			
+		}
+
+		if (timeCapsule) {
+			text = 'Finally, the time capsule that prophet gave to you contained information on how the unwise use of water caused its shortage in first place. '
+			+ 'Your souciety can use your ancestors experience to escape their fate.';			
+		} else {
+			text = 'Your society becomes careless water consumer and soon get itself into water shortage again.';			
+		}
+
+		$('#scene_text').text(
+			text
 		);
 
 		$('#button1').show();
@@ -380,6 +592,28 @@ function setScene() {
 		$('#button2').hide();
 		$('#button3').hide();		
 	}
+
+	if (currentScene == 401) {
+		$('#scene_text').text(
+			'This minigame is in development. We suppose you won.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Proceed.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
+
+	if (currentScene == 402) {
+		$('#scene_text').text(
+			'This minigame is in development. We suppose you won.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Proceed.');
+		$('#button2').hide();
+		$('#button3').hide();		
+	}
 }
 
 function onChoice(button) {
@@ -469,7 +703,7 @@ function onChoice(button) {
 		if (button == 'button1') {
 			decrementFood();
 			decrementWater();
-			currentScene = 8;
+			currentScene = 22;
 			hasHorse = false;
 		} else if (button == 'button2') {
 			leftHorse = true;
@@ -497,11 +731,11 @@ function onChoice(button) {
 			pipesDiagram = true;
 			buriedScientist = true;
 			markedScientist = true;
-			currentScene = 10;
+			currentScene = 23;
 		} else if (button == 'button2') {
 			pipesDiagram = true;
 			buriedScientist = true;
-			currentScene = 10;
+			currentScene = 23;
 		} else if (button == 'button3') {
 			currentScene = 10;
 		}
@@ -552,7 +786,7 @@ function onChoice(button) {
 			if (collectedBerries) {
 				food = 2;
 				water = 2;
-				currentScene = 12;
+				currentScene = 24;
 
 				if (stolenPipesDiagram) {
 					pipesDiagram = true;
@@ -572,8 +806,7 @@ function onChoice(button) {
 	// SCENE 12
 
 	else if (currentScene == 12) {
-		if (button == 'button1') {
-		} else if (button == 'button2') {
+		if (button == 'button2') {
 			toldStory = true;
 		}
 
@@ -604,9 +837,9 @@ function onChoice(button) {
 
 	else if (currentScene == 17) {
 		if (button == 'button1') {
-			//TODO: Barry Collecting Game
+			currentScene = 401;
 		} else if (button == 'button2') {
-			currentScene = 19;
+			currentScene = 27;
 		}
 	}
 
@@ -615,10 +848,10 @@ function onChoice(button) {
 	else if (currentScene == 18) {
 		if (button == 'button1') {
 			if (buriedScientist) {
-				storageTechnology = true;
+				currentScene = 28;
+			} else {
+				currentScene = 29;
 			}
-
-			currentScene = 19;
 		} else if (button == 'button2') {
 			currentScene = 19;
 		}
@@ -628,22 +861,64 @@ function onChoice(button) {
 
 	else if (currentScene == 19) {
 		if (button == 'button1') {
-			if (leftHorse == true) {
-				//TODO: Dead Scene: Wolf Attack
-			} else {
-				if (buriedScientist == false) {
-					currentScene == 21;
-				}
-			}
+			currentScene = 20;
 		} else if (button == 'button2') {
-
+			currentScene = 101;
 		}
+	}
+
+	// SCENE 22
+
+	else if (currentScene == 20) {
+		currentScene = 402;
+	}
+
+	else if (currentScene == 22) {
+		currentScene = 8;
+	}
+
+	else if (currentScene == 23) {
+		currentScene = 10;
+	}
+
+	else if (currentScene == 24) {
+		currentScene = 12;
+	}
+
+	else if (currentScene == 25) {
+		currentScene = 16;
+	}
+
+	else if (currentScene == 26) {
+		currentScene = 101;
+	}
+
+	else if (currentScene == 27) {
+		currentScene = 26;
+	}
+
+	else if (currentScene == 28) {
+		currentScene = 19;
+	}
+
+	else if (currentScene == 29) {
+		treatmentTechnology = true;
+		currentScene = 19;
 	}
 
 	// Game scenes
 
 	else if (currentScene == 400) {
 		startMaze();
+	}
+
+	else if (currentScene == 401) {
+		waterResource = true;
+		currentScene = 18;
+	}
+
+	else if (currentScene == 402) {
+		currentScene = 101;
 	}
 
 	else if (currentScene == 300) {

@@ -12,7 +12,7 @@
 // CONSTANTS
 //////////////////////////////////////////////////////////////////////////////
 
-var MAZE_SIZE=2;
+var MAZE_SIZE=18;
 
 var GOAL_CELL = new MazeCell(MAZE_SIZE-1,MAZE_SIZE-1);
 
