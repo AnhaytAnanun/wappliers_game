@@ -1,6 +1,6 @@
 var mazeRunning = false;
 var timerRuning = false;
-var countdown = 60;
+var countdown = 90;
 var tid;
 
 $('#timer').hide();
@@ -55,7 +55,7 @@ function wonMaze() {
 }
 
 function startMaze() {
-    countdown = 60;
+    countdown = 90;
 
     mazeRunning = true;
     $('#maze_element').show();
