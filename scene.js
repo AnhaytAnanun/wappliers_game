@@ -13,14 +13,14 @@ var stolenPipesDiagram = false;
 var hadHorse = false;
 
 var toldStory = false;
+var returnedToGrave = false;
+var suspectsRanger = false;
 
 var pipesDiagram = false;
 var waterResource = false;
 var treatmentTechnology = false;
 var storageTechnology = false;
 var timeCapsule = false;
-var returnedToGrave = false;
-var suspectsRanger = false;
 
 function setScene() {
 
@@ -470,28 +470,28 @@ function setScene() {
 		var text = 'You have successfully located springs that can be used as water resources. ';
 
 		if (pipesDiagram) {
-			text = 'You also found diagrams of how to construct water delivery routes, so you now can efficiently deliver water to consumers. ';
+			text = text + 'You also found diagrams of how to construct water delivery routes, so you now can efficiently deliver water to consumers. ';
 		} else {
-			text = 'Still, delivering water to consmers is a problem as you don\'t know how to construct delivery system efficiently';
+			text = text + 'Still, delivering water to consmers is a problem as you don\'t know how to construct delivery system efficiently';
 		}
 
 		if (treatmentTechnology) {
-			text = 'You also found diagrams of how to construct water treatment facilities, so you now can purify a lot of water besides those in springs and are less affected by environment changes. ';
+			text = text + 'You also found diagrams of how to construct water treatment facilities, so you now can purify a lot of water besides those in springs and are less affected by environment changes. ';
 		} else {
-			text = 'Still, purifying water is a problem as you don\'t know how to construct treatment facilities efficiently. Your society is exposed to environment changes. ';			
+			text = text + 'Still, purifying water is a problem as you don\'t know how to construct treatment facilities efficiently. Your society is exposed to environment changes. ';			
 		}
 
 		if (storageTechnology) {
-			text = 'You also found diagrams of how to construct water storages, so you now can efficiently store water for hard times. ';			
+			text = text + 'You also found diagrams of how to construct water storages, so you now can efficiently store water for hard times. ';			
 		} else {
-			text = 'Still, storing water is a problem as you don\'t know how to construct storages efficiently. Your society is exposed to environment changes. ';			
+			text = text + 'Still, storing water is a problem as you don\'t know how to construct storages efficiently. Your society is exposed to environment changes. ';			
 		}
 
 		if (timeCapsule) {
-			text = 'Finally, the time capsule that prophet gave to you contained information on how the unwise use of water caused its shortage in first place. '
+			text = text + 'Finally, the time capsule that prophet gave to you contained information on how the unwise use of water caused its shortage in first place. '
 			+ 'Your souciety can use your ancestors experience to escape their fate.';			
 		} else {
-			text = 'Your society becomes careless water consumer and soon get itself into water shortage again.';			
+			text = text + 'Your society becomes careless water consumer and soon get itself into water shortage again.';			
 		}
 
 		$('#scene_text').text(
@@ -1025,7 +1025,24 @@ function onChoice(button) {
 
 function setResources() {
 	var text = hasHorse ? 'Horse Companion    ' : '';
-	$('#resources_text').text(text + 'Food: ' + food + '    Water: ' + water);
+	$('#food_text').text('x' + food);
+	$('#water_text').text('x' + water);
+
+	if (treatmentTechnology) {
+		$('#water_treatment').css('opacity', 1);
+	}
+	if (waterResource) {
+		$('#water_resource').css('opacity', 1)
+	}
+	if (storageTechnology) {
+		$('#water_storage').css('opacity', 1);
+	}
+	if (pipesDiagram) {
+		$('#pipe_diagram').css('opacity', 1);
+	}
+	if (timeCapsule) {
+		$('#time_capsule').css('opacity', 1);
+	}
 }
 
 function decrementFood() {

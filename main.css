@@ -1,3 +1,18 @@
+@font-face {
+    font-family: Arcade;
+    src: url(./ARCADECLASSIC.TTF);
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url(./disposabledroid-bb.regular.ttf);
+}
+
+@font-face {
+    font-family: BoldPixel;
+    src: url(./disposabledroid-bb.bold.ttf);
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -21,8 +36,8 @@ canvas {
     height: 750px;
     margin-top: -375px; /*set to a negative number 1/2 of your height*/
     margin-left: -500px; /*set to a negative number 1/2 of your width*/
-    border: 2px solid #ccc;
-    background-color: #000515;
+    border: 2px solid rgba(204, 204, 204, 0.4);
+    background-color: rgba(0, 5, 21, 0.7);
 }
 
 #maze_element {
@@ -40,23 +55,14 @@ canvas {
 	text-align: center;
 }
 
-#resources_text {
-	position: absolute;
-	width: 950px;
-	height: auto;
-	top: 10px;
-	left: 25px;
-	font: 16px/26px Georgia, Garamond, Serif;overflow:auto;
-	color: #ccc;
-}
-
 #scene_text {
 	position: absolute;
 	width: 950px;
-	height: auto;
+	height: 450px;
 	left: 25px;
 	bottom: 200px;
-	font: 16px/26px Georgia, Garamond, Serif;overflow:auto;
+	/*font: 33px/33px Georgia, Garamond, Serif;overflow:auto;*/
+	font: 34px/34px Pixel; overflow: auto;
 	color: #ccc;
 }
 
@@ -75,6 +81,10 @@ canvas {
 	width: 950px;
 	left: 25px;
 	margin: 5px 0px 5px 0px;
+	font: 25px/25px BoldPixel; overflow: auto;
+	background-color: transparent;
+	border-width: 0px;
+	color: #ccc;
 }
 
 #button2 {
@@ -84,6 +94,10 @@ canvas {
 	width: 950px;
 	left: 25px;
 	margin: 5px 0px 5px 0px;
+	font: 25px/25px BoldPixel; overflow: auto;
+	background-color: transparent;
+	border-width: 0px;
+	color: #ccc;
 }
 
 #button3 {
@@ -93,4 +107,104 @@ canvas {
 	width: 950px;
 	left: 25px;
 	margin: 5px 0px 5px 0px;
+	font: 25px/25px BoldPixel; overflow: auto;
+	background-color: transparent;
+	border-width: 0px;
+	color: #ccc;
+}
+
+/*
+ * Food and Water resources
+ */
+
+#resources {
+	position: absolute;
+	width: 200px;
+	height: 40px;
+	top: 25px;
+	left: 25px;
+}
+
+#food_icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+#food_text {
+	position: absolute;
+	left: 45px;
+	width: 30px;
+	height: 40px;
+	font-family: Arcade;
+	color: #ccc;
+}
+
+#water_icon {
+	position: absolute;
+	left: 85px;
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+#water_text {
+	position: absolute;
+	left: 125px;
+	width: 30px;
+	height: 40px;
+	font-family: Arcade;
+	color: #ccc;
+}
+
+/*
+ * Items
+ */
+
+#items {
+	position: absolute;
+	width: 220px;
+	height: 40px;
+	right: 25px;
+	top: 25px;
+}
+
+#water_resource {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	opacity: 0.3;
+}
+
+#water_treatment {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	left: 40px;
+	opacity: 0.3;
+}
+
+#water_storage {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	left: 80px;
+	opacity: 0.3;
+}
+
+#pipe_diagram {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	left: 130px;
+	opacity: 0.3;
+}
+
+#time_capsule {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	left: 180px;
+	opacity: 0.3;
 }
