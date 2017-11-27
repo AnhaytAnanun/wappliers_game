@@ -1,4 +1,4 @@
-var currentScene = 1;
+var currentScene = 4;
 var food = 3;
 var water = 3;
 var hasHorse = false;
@@ -19,6 +19,8 @@ var waterResource = false;
 var treatmentTechnology = false;
 var storageTechnology = false;
 var timeCapsule = false;
+var returnedToGrave = false;
+var suspectsRanger = false;
 
 function setScene() {
 
@@ -84,6 +86,8 @@ function setScene() {
 			'You never now what awaits you there, it may be fascinating technologies as well as monsters and outlaws, both deadly to meet. ' +
 			'Rain starts. Its acid rain.'
 		);
+
+		$('#scene_image').attr('src', './images/acid_rain.gif');
 
 		$('#button1').show();
 		$('#button1').text('Continue walking, you have special hood to cover yourself.');
@@ -297,6 +301,7 @@ function setScene() {
 		if (markedScientist) {
 			if (toldStory) {
 				missed = true;
+				suspectsRanger = true;
 				text = 'You found the grave open and the corpse stripped and examined. You also notice footprints that look like ones from ranger\'s boots.';
 			} else {
 				missed = true;
@@ -322,7 +327,21 @@ function setScene() {
 		$('#button1').text('Continue.');
 		$('#button2').hide();
 		$('#button3').hide();
-	}	
+	}
+
+	// SCENE 21
+
+	if (currentScene == 21) {
+		$('#scene_text').text(
+			'You see the '
+		);
+
+		$('#button1').show();
+		$('#button1').text('This is suspicious. Try and kill ranger by throwing a knife.');
+		$('#button2').show();
+		$('#button1').text('Great ranger.');
+		$('#button3').hide();
+	}
 
 	// SCENE 22
 
@@ -428,7 +447,7 @@ function setScene() {
 		$('#button1').show();
 		$('#button1').text('Continue.');
 		$('#button2').hide();
-		$('#button3').hide();		
+		$('#button3').hide();
 	}
 
 	// OUTCOME ONE, SCENE 100
@@ -556,6 +575,38 @@ function setScene() {
 			'The Prophet shoot the door down. ' +
 			'"You did not pass my probation", The Prophet said, "So I will lock you here." ' +
 			'You wondered the maze until you starved to the death.'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// DEAD AS KILLED BY RANGER
+
+	if (currentScene == 205) {
+		$('#scene_text').text(
+			'Joyful that you were able to find valuable information for your society, you are returning home. ' +
+			'You see ranger near the road, looking to you, and great him happily. ' +
+			'Suddenly, ranger pull out a gun and shoot you. ' +
+			'You got heavily injured, fall down and started to loose consciousness. ' +
+			'Last thing you ever seen and heared in this world was ranger, collecting stuff you found and murmuring something about world domination through control of water'
+		);
+
+		$('#button1').show();
+		$('#button1').text('Replay.');
+		$('#button2').hide();
+		$('#button3').hide();
+	}
+
+	// DEAD AS KILLED BY RANGER
+
+	if (currentScene == 206) {
+		$('#scene_text').text(
+			'Ranger turned in your direction immidiately. There is a gun in his hand and he shoot you. ' +
+			'You got heavily injured, fall down and started to loose consciousness. ' +
+			'Last thing you ever seen and heared in this world was ranger, collecting stuff you found and murmuring something about world domination through control of water'
 		);
 
 		$('#button1').show();
@@ -817,7 +868,7 @@ function onChoice(button) {
 
 	else if (currentScene == 13) {
 		if (button == 'button1') {
-			//TODO: Excessive Use Ending
+			currentScene = 26;
 		} else if (button == 'button2') {
 			currentScene = 16;
 		}
@@ -867,10 +918,24 @@ function onChoice(button) {
 		}
 	}
 
-	// SCENE 22
+	// SCENE 20
 
 	else if (currentScene == 20) {
-		currentScene = 402;
+		if (suspectsRanger) {
+			currentScene = 21;
+		} else {
+			currentScene = 205;
+		}
+	}
+
+	// SCENE 21
+
+	else if (currentScene == 21) {
+		if (button == 'button1') {
+			// TODO: Put Minigame
+		} else if (button == 'button2') {
+			currentScene = 206;
+		}
 	}
 
 	else if (currentScene == 22) {
