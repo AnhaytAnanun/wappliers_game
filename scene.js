@@ -31,10 +31,10 @@ function setScene() {
 	if (currentScene == 1) {
 		$('#scene_text').text(
 			'Welcome adventurer! You have been chosen by the elder council to help our community. ' +
-			'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water. ' +
-			'Our ancestors were not that wise to use water cautiously and now we have very little left. ' + 
-			'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water. ' + 
-			'We are begging you to search for new water resources and for tools and data that might help to construct water treatment infrastructure. ' + 
+			'Years have passed since the apocalypse began and everyone is struggling to survive. Currently, the most urgent issue is having enough water. ' +
+			'Previous generations did ration the water wisely and it is almost all gone! ' + 
+			'And since none of the water treatment specialists survived, all of the water became contaminated. ' + 
+			'Please! We are begging you to search for  water resources, tools and anything else that could help treat the contaminated water so it is safe to drink	. ' + 
 			'But please hurry! We are running out of water!'
 		);
 
@@ -69,15 +69,15 @@ function setScene() {
 
 	if (currentScene == 3) {
 		$('#scene_text').text(
-			'After some eating and drinking, the horse was able to stand on its 4 legs with a bit of your help. ' +
-			'It looks quite happy, even trying to run around. ' +
-			'Only now you notice that there is no bridle and no sign of its wearing on cheecks and tooth of the horse.'
+			'After you finished eating, the horse was able to stand on its 4 legs with a bit of your help. ' +
+			'The horse seems quite happy, even when trying to run around. ' +
+			'You noticed the horse does not have a bridle and the horse does not show any indications shes ever wore one.'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
 
 		$('#button1').show();
-		$('#button1').text('I saved this horse, so it is mine now.');
+		$('#button1').text('I saved this horse, so it is mine now!');
 		$('#button2').show();
 		$('#button2').text('Let it go. She belongs to the nature.');
 		$('#button3').hide();
@@ -87,16 +87,16 @@ function setScene() {
 
 	if (currentScene == 4) {
 		$('#scene_text').text(
-			'You continue your journey. The sky above slowly turns grey, covering with heavy, bizzare shaped clouds until there is no free spot left. ' +
-			'On the edge of the horizon, you see grey buildings, remnants of some old factory or scientific plant. ' +
-			'You can never now what awaits you in there, it may be fascinating technologies as well as monsters and outlaws, both deadly to meet. ' +
-			'Rain starts. It is acid rain.'
+			'You continue the journey. The skies above slowly turn grey, covering with heavy, strange-shaped clouds that completely fill the sky. ' +
+			'On the edge of the horizon, you see a skyline of grey buildings and the remnants of the old factories and warehouse facilities. ' +
+			'You do not know what awaits inside. It could be cutting edge-technologies and cool gadgets? It could be saturated with monsters and criminals? However, both are deadly to meet. ' +
+			'As rain begins falling to the ground, you quickly discover it is not just water, its acid rain.'
 		);
 
 		$('#scene_image').attr('src', './images/acid_rain.gif');
 
 		$('#button1').show();
-		$('#button1').text('Continue walking, you have special hood to cover yourself.');
+		$('#button1').text('Continue walking and hope your special, acid-proof hood covers enough to protect you.');
 		$('#button2').show();
 		$('#button2').text('Hide in the closest of buildings.');
 		$('#button3').hide();
@@ -106,17 +106,17 @@ function setScene() {
 
 	if (currentScene == 5) {
 		$('#scene_text').text(
-			'You slept well during the night, listening the rythmic drops of the rain and sad howl of the wind. ' +
-			'At the morning, you attempted to make some breakfest, but was interrupted by strange sounds from outside. ' +
-			'A serpent-like mutant ambushes you.'
+			'You sleep well during the night, listening the rythmic drops of the rain and wind. ' +
+			'When you woke up the next morning, you began cooking breakfast, but was suddenly interrupted by the strange sounds outside. ' +
+			'A serpent-like mutant creature attacks and ambushes you.'
 		);
 
 		$('#scene_image').attr('src', './images/serpent.jpg');
 
 		$('#button1').show();
-		$('#button1').text('Fight. Mutants must die!');
+		$('#button1').text('Fight!!! Mutants must die!');
 		$('#button2').show();
-		$('#button2').text('Run. You must not risk yourself.');
+		$('#button2').text('Run!!! It is too dangerous.');
 		$('#button3').hide();
 	}
 
@@ -124,8 +124,8 @@ function setScene() {
 
 	if (currentScene == 6) {
 		$('#scene_text').text(
-			'You put on your hood and continue your way. Suddenly, you hear how a heavy object falls down into a mud.' +  
-			'You turn around to find your horse collapsed - the acid rain was too much for this poor being.' + 
+			'You put on your hood and continue the journey. Suddenly, you hear a heavy object fall into a pile of mud.' +  
+			'You quickly turn around and discover your horse collapsed! The acid rain was too much for this poor being.' + 
 			'Would you like to try and help the horse?.'
 		);
 
@@ -142,17 +142,17 @@ function setScene() {
 
 	if (currentScene == 7) {
 		$('#scene_text').text(
-			'You covered the horse with an extra hood, gave it food and water, but its state seems to get worse and worse. ' +
-			'It passes away, looking straight into your eyes with dignity. ' +
+			'You covered the horse with an extra hood and gave her food and water, but it is too late. ' +
+			'Your horse slowly passes away, looking straight into your the entire time with a peace of mind knowing she is not dying alone. ' +
 			'Would you like to bury the corpse?'
 		);
 
 		$('#scene_image').attr('src', './images/horse_laying.jpg');
 
 		$('#button1').show();
-		$('#button1').text('Yes, that will be a human act.');
+		$('#button1').text('Yes, that will be the honorable thing to do.');
 		$('#button2').show();
-		$('#button2').text('Leave it, let the nature take what belongs to it.');
+		$('#button2').text('Leave it. Let nature happen.');
 		$('#button3').hide();
 	}
 
@@ -160,9 +160,9 @@ function setScene() {
 
 	if (currentScene == 8) {
 		$('#scene_text').text(
-			'Rain stops. Even that it was an acid one, it is fresh and beautiful outside. ' +
-			'Small water drops cover grass and rare bushes. Deadly drops. ' +
-			'You notice a bush of Klyukva, a rare and tasty berry.'
+			'Even thought it is pouring acid rain, it is eery, yet beautiful outside. ' +
+			'Small drops of acid water covers the trees and exotic plants throughout the woods. Deadly drops. ' +
+			'You notice the bush of Klyukva, which is rare, exotic and tasty berry.'
 		);
 
 		$('#scene_image').attr('src', './images/klyukva.jpg');
@@ -170,7 +170,7 @@ function setScene() {
 		$('#button1').show();
 		$('#button1').text('Collect it to refill food resources.');
 		$('#button2').show();
-		$('#button2').text('Leave it by.');
+		$('#button2').text('Leave it alone.');
 		$('#button3').hide();
 	}
 
