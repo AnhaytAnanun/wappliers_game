@@ -117,10 +117,10 @@ function stopShooting() {
     $('#distort').show();
 }
 
-function shootingWin() {
+function shootingWon() {
     shootingAttempt = 3;
 
-    currentScene = 401;
+    currentScene = 301;
 
     stopShooting();
     setScene();

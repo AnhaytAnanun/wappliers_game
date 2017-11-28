@@ -34,6 +34,8 @@ function shootingLoaded() {
 		}
 
 		if (bulletLocation > contextWidth && isShooting) {
+			console.log(rengerLocation + 25, rengerLocation - 25);
+
 			isShooting = false;
 
 			if (contextHeight / 2 < rengerLocation + 15

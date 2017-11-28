@@ -38,7 +38,7 @@ function setScene() {
 			'But please hurry! We are running out of water!'
 		);
 
-		$('#scene_image').attr('src', './images/greeting.png');
+		$('#scene_image').attr('src', './images/greeting.jpg');
 
 		$('#button1').show();
 		$('#button1').text('I will gladly serve our society!');
@@ -51,9 +51,9 @@ function setScene() {
 
 	if (currentScene == 2) {
 		$('#scene_text').text(
-			'You entered waistland praires. It is a dangerous place, but you hope to find some abandoned mechanisms or tools or documentation' +
+			'You entered waistland praires. It is a dangerous place, but you hope to find some abandoned mechanisms or tools or documentation ' +
 			'that might help. After a while of traveling, you happen a horse, laying on the ground. ' +
-			'It seems to be exhasted and starving, you can see its rib bones under skin.'
+			'It seems to be exhausted and starving, you can see its rib bones under the skin.'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
@@ -70,16 +70,16 @@ function setScene() {
 	if (currentScene == 3) {
 		$('#scene_text').text(
 			'After some eating and drinking, the horse was able to stand on its 4 legs with a bit of your help. ' +
-			'It seem quite happy, even trying to run around. ' +
-			'You now you noticed that there is no bridle and no sign of its wearing on cheecks and tooth.'
+			'It looks quite happy, even trying to run around. ' +
+			'Only now you notice that there is no bridle and no sign of its wearing on cheecks and tooth of the horse.'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
 
 		$('#button1').show();
-		$('#button1').text('I saved this horse, so it mine now.');
+		$('#button1').text('I saved this horse, so it is mine now.');
 		$('#button2').show();
-		$('#button2').text('Let it go. She belongs to nature.');
+		$('#button2').text('Let it go. She belongs to the nature.');
 		$('#button3').hide();
 	}
 
@@ -87,10 +87,10 @@ function setScene() {
 
 	if (currentScene == 4) {
 		$('#scene_text').text(
-			'You continue your journey. The sky above slowly turns grey, covering with heavy, strange shaped clouds until there is no free spot left. ' +
-			'On the edge of the horizon, you see grey building, remnants of some old factory or scientific plant. ' +
-			'You never now what awaits you there, it may be fascinating technologies as well as monsters and outlaws, both deadly to meet. ' +
-			'Rain starts. Its acid rain.'
+			'You continue your journey. The sky above slowly turns grey, covering with heavy, bizzare shaped clouds until there is no free spot left. ' +
+			'On the edge of the horizon, you see grey buildings, remnants of some old factory or scientific plant. ' +
+			'You can never now what awaits you in there, it may be fascinating technologies as well as monsters and outlaws, both deadly to meet. ' +
+			'Rain starts. It is acid rain.'
 		);
 
 		$('#scene_image').attr('src', './images/acid_rain.gif');
@@ -106,7 +106,7 @@ function setScene() {
 
 	if (currentScene == 5) {
 		$('#scene_text').text(
-			'You sleep well during the night, listening the rythmic drops of the rain and wind. ' +
+			'You slept well during the night, listening the rythmic drops of the rain and sad howl of the wind. ' +
 			'At the morning, you attempted to make some breakfest, but was interrupted by strange sounds from outside. ' +
 			'A serpent-like mutant ambushes you.'
 		);
@@ -124,7 +124,7 @@ function setScene() {
 
 	if (currentScene == 6) {
 		$('#scene_text').text(
-			'You put on your hood and continue your way. Suddenly, you heard how a heavy object falls down into a mud.' +  
+			'You put on your hood and continue your way. Suddenly, you hear how a heavy object falls down into a mud.' +  
 			'You turn around to find your horse collapsed - the acid rain was too much for this poor being.' + 
 			'Would you like to try and help the horse?.'
 		);
@@ -142,9 +142,9 @@ function setScene() {
 
 	if (currentScene == 7) {
 		$('#scene_text').text(
-			'You covered the horse with an extra hood, gave in food and water, but its state seems to warsen. ' +
+			'You covered the horse with an extra hood, gave it food and water, but its state seems to get worse and worse. ' +
 			'It passes away, looking straight into your eyes with dignity. ' +
-			'Would you like tu bury the corpse?'
+			'Would you like to bury the corpse?'
 		);
 
 		$('#scene_image').attr('src', './images/horse_laying.jpg');
@@ -160,7 +160,7 @@ function setScene() {
 
 	if (currentScene == 8) {
 		$('#scene_text').text(
-			'Even that rain was an acid one, it is fresh and beautiful outside. ' +
+			'Rain stops. Even that it was an acid one, it is fresh and beautiful outside. ' +
 			'Small water drops cover grass and rare bushes. Deadly drops. ' +
 			'You notice a bush of Klyukva, a rare and tasty berry.'
 		);
@@ -178,8 +178,8 @@ function setScene() {
 
 	if (currentScene == 9) {
 		$('#scene_text').text(
-			'A blink of light not far away catches you attention. You followed the bling to find a pare of glasses on the ground, ' +
-			'and a corpse of a man in lab coat neaby.'
+			'A blink of light not far away catched you attention. You followed the blink to find a pare of glasses on the ground, ' +
+			'and a corpse of a man in lab coat nearby.'
 		);
 
 		$('#scene_image').attr('src', './images/glasses.jpg');
@@ -196,7 +196,7 @@ function setScene() {
 
 	if (currentScene == 10) {
 		$('#scene_text').text(
-			'You were surrounded by outlaws. This are harsh men of the wastelands, they only value brute force and water.'
+			'You were surrounded by outlaws. These are harsh men of the wastelands, they only value brute force and water.'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
@@ -213,7 +213,7 @@ function setScene() {
 	if (currentScene == 11) {
 		$('#scene_text').text(
 			'You lost the fight and was heavily beaten. Now you can find the foorptints of outlaws on the ground. ' + 
-			'Would you like to return to follow them and take revenge?'
+			'Would you like to follow them and take revenge?'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
@@ -236,7 +236,7 @@ function setScene() {
 		$('#scene_image').attr('src', './images/praire.jpg');
 
 		$('#button1').show();
-		$('#button1').text('Keep silence. No one can be trusted in the wastelands, moreover those kind to you.');
+		$('#button1').text('Keep silence. No one can be trusted in the wastelands, moreover those who are kind to you.');
 		$('#button2').show();
 		$('#button2').text('Tell story. This man is kind to you, after all.');
 		$('#button3').hide();
@@ -246,7 +246,7 @@ function setScene() {
 
 	if (currentScene == 13) {
 		$('#scene_text').text(
-			'You made a small campfire. The Ranger is offered some of his food to you. Do you also like to offer some food?'
+			'You made a small campfire. The Ranger is offering some of his food to you. Do you also like to offer some food?'
 		);
 
 		$('#scene_image').attr('src', './images/campfire.gif');
@@ -262,8 +262,8 @@ function setScene() {
 
 	if (currentScene == 16) {
 		$('#scene_text').text(
-			'You found prophet\'s cave high in the mountains. He greeted you by name and asked if you would like to take a tour into deep of the cave. '
-			+ 'He promises to show something really valuable for you.'
+			'You found prophet\'s cave high in the mountains. He greets you by name and asks if you would like to take a tour into deep of the cave. '
+			+ 'He promises to show something really valuable to you.'
 		);
 
 		$('#scene_image').attr('src', './images/mountains_prophet.jpg');
@@ -295,8 +295,9 @@ function setScene() {
 
 	if (currentScene == 18) {
 		$('#scene_text').text(
-			'Widow is pleased by your act and tells you location of secret springs she takes water from. She also asks if you would like to rest at her house. You gladly accept. Inside, you noticed a bloody lab coat hanging on a chair. '
-			+ 'Will you tell widow about your encounter with scientist corpse?'
+			'Widow is pleased by your act and tells you location of secret springs she takes water from. ' +
+			'She also asks if you would like to rest at her house. You gladly accept. Inside, you notice a bloody lab coat hanging on a chair. ' +
+			'Will you tell widow about your encounter with scientist corpse?'
 		);
 
 		$('#scene_image').attr('src', './images/widow.png');
@@ -343,7 +344,7 @@ function setScene() {
 
 		if (!buriedScientist) {
 			missed = true;
-			text = 'Wolves made their way with the corpse. Nothing to search for here anymore.'
+			text = 'Wolves made their way with the corpse. Nothing to search 	for here anymore.'
 		}
 
 		if (!missed) {
@@ -368,10 +369,10 @@ function setScene() {
 	if (currentScene == 21) {
 		$('#scene_text').text(
 			'Irritated by the footprints near the scientist corpse, you proceed cautiously. ' +
-			'Not far from your home you notice the renger standing their and nervously gazing at the road.'
+			'Not far from your home you notice the ranger standing near the road and nervously gazing at it.'
 		);
 
-		$('#scene_image').attr('src', './images/greeting.png');
+		$('#scene_image').attr('src', './images/greeting.jpg');
 
 		$('#button1').show();
 		$('#button1').text('This is suspicious. Try and kill ranger by throwing a knife.');
@@ -384,7 +385,7 @@ function setScene() {
 
 	if (currentScene == 22) {
 		$('#scene_text').text(
-			'It was not easy to bury the horse. You tired a lot and consumed some extra food and water.'
+			'It was not easy to bury the horse. You got tired much and consumed some extra food and water.'
 		);
 
 		$('#scene_image').attr('src', './images/horse_laying.jpg');
@@ -420,7 +421,7 @@ function setScene() {
 			'There was no one alive at the camp - they all died from tasting the Klyukva berries which appear to absorb the poison from acid rain.'
 		);
 
-		$('#scene_image').attr('src', './images/outlaw_camp.jpg');
+		$('#scene_image').attr('src', './images/outlaw_camp.png');
 
 		$('#button1').show();
 		$('#button1').text('Continue.');
@@ -513,7 +514,7 @@ function setScene() {
 			'So enjoy your water while you have it.'
 		);
 
-		$('#scene_image').attr('src', './images/greeting.png');
+		$('#scene_image').attr('src', './images/greeting.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -553,7 +554,7 @@ function setScene() {
 			text
 		);
 
-		$('#scene_image').attr('src', './images/greeting.png');
+		$('#scene_image').attr('src', './images/greeting.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -625,7 +626,7 @@ function setScene() {
 			'You where noticed by camp watchman and shot down. '
 		);
 
-		$('#scene_image').attr('src', './images/outlaw_camp.jpg');
+		$('#scene_image').attr('src', './images/outlaw_camp.png');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -699,14 +700,14 @@ function setScene() {
 		$('#button1').show();
 		$('#button1').text('Proceed.');
 		$('#button2').hide();
-		$('#button3').hide();		
+		$('#button3').hide();
 	}
 
 	// GAME OUTCOME FOR SHOOTING, SCENE 301
 
 	if (currentScene == 301) {
 		$('#scene_text').text(
-			'You have killed the renger. ' +
+			'You have killed the ranger. ' +
 			'Whatever his real intentions were, your road is surely safe now.'
 		);
 
@@ -740,7 +741,7 @@ function setScene() {
 			'Press space button when you want to throw the knife. You have three chances.'
 		);
 
-		$('#scene_image').attr('src', './images/greeting.png');
+		$('#scene_image').attr('src', './images/greeting.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Proceed.');
