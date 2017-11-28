@@ -31,10 +31,10 @@ function setScene() {
 	if (currentScene == 1) {
 		$('#scene_text').text(
 		'Welcome adventurer! You have been chosen by the elder council to help our community. ' +
-		'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water. ' +
-		'Our ancestors were not that wise to use water cautiously and now we have very little left. ' + 
-		'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water. ' + 
-		'We are begging you to search for new water resources and for tools and data that might help to construct water treatment infrastructure. ' + 
+		'Years have passed since the apocalypse began and everyone is struggling to survive. Currently, the most urgent issue is having enough water. ' +
+		'Previous generations did ration the water wisely and it is almost all gone! ' + 
+		'And since none of the water treatment specialists survived, all of the water became contaminated. ' + 
+		'Please! We are begging you to search for  water resources, tools and anything else that could help treat the contaminated water so it is safe to drink	. ' + 
 		'But please hurry! We are running out of water!'
 		);
 
