@@ -44,13 +44,26 @@ canvas {
     position:absolute;
 }
 
+#shooting_element {
+	padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 #timer {
     position:absolute;
     width: 255px;
     height: 50px;
     top: 50px;
     left: 800px;
-	font: 26px/26px Georgia, Garamond, Serif;overflow:auto;
+	font: 26px/26px Pixel;overflow:auto;
 	color: #ccc;
 	text-align: center;
 }
@@ -67,12 +80,17 @@ canvas {
 }
 
 #scene_image {
-	/*position: absolute;*/
+	position: absolute;
 	width: 100%;
 	height: 100%;
-/*	top: 50px;
-	left: 50px;
-*/}
+}
+
+#distort {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);	
+}
 
 #button1 {
 	position: absolute;

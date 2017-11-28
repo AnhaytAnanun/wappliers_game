@@ -1,7 +1,9 @@
 var mazeRunning = false;
 var timerRuning = false;
+var shootingRunning = false;
 var countdown = 90;
 var tid;
+var shootingAttempt = 3;
 
 $('#timer').hide();
 
@@ -60,6 +62,8 @@ function startMaze() {
     mazeRunning = true;
     $('#maze_element').show();
     $('#center_element').hide();
+    $('#scene_image').hide();    
+    $('#distort').hide();
 
     $('#timer').text(countdown);
 
@@ -76,6 +80,8 @@ function stopMaze() {
     mazeRunning = true;
     $('#maze_element').hide();
     $('#center_element').show();
+    $('#scene_image').show();    
+    $('#distort').show();
 
     $('#timer').hide();   
 }
@@ -90,5 +96,47 @@ function runTime() {
         setScene();
 
         stopMaze();
+    }
+}
+
+function startShooting() {
+    shootingLoaded();
+
+    shootingRunning = true;
+    $('#shooting_element').show();
+    $('#center_element').hide();
+    $('#scene_image').hide();    
+    $('#distort').hide();
+}
+
+function stopShooting() {
+    shootingRunning = false;
+    $('#shooting_element').hide();
+    $('#center_element').show();
+    $('#scene_image').show();    
+    $('#distort').show();
+}
+
+function shootingWin() {
+    shootingAttempt = 3;
+
+    currentScene = 401;
+
+    stopShooting();
+    setScene();
+}
+
+function shootingMissed() {
+    shootingAttempt--;
+
+    if (shootingAttempt == 0) {
+        shootingAttempt = 3;
+
+        currentScene = 206;
+
+        stopShooting();
+        setScene();
+    } else {
+        resetShooting();
     }
 }

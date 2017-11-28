@@ -16,6 +16,7 @@
     <script type="text/javascript" src="./HTML5-Maze/html5-maze/lib/maze/mazerenderer.js"></script>
     <script type="text/javascript" src="./HTML5-Maze/html5-maze/lib/maze/maze.js"></script>    
     <script type="text/javascript" src="./HTML5-Maze/html5-maze/lib/gameplay/man.js"></script>
+    <script type="text/javascript" src="./Shooting/shooting.js"></script>
 
 </head>
 
@@ -24,6 +25,7 @@
     <div id="timer"></div>
 
     <img id="scene_image">
+    <div id="distort"></div>
 
     <div id="center_element">
         <div id="resources">
@@ -46,11 +48,17 @@
         <button id="button2" onclick="onChoice('button2')">Button 2</button>
         <button id="button3" onclick="onChoice('button3')">Button 3</button>
     </div>
-    <canvas id="maze_element" class="maze_element" width="750" height="750" />
+    <canvas id="maze_element" class="maze_element" width="750" height="750"></canvas>
+    <canvas id="shooting_element" class="shooting_element" width="750" height="200"></canvas>
+
+    <audio controls autoplay loop hidden="true">
+      <source src="./WaterMelodies.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
     (function() {
         $('#maze_element').hide();
+        $('#shooting_element').hide();
         setScene();
     })();
 

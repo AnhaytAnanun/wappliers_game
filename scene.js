@@ -1,4 +1,4 @@
-var currentScene = 4;
+var currentScene = 1;
 var food = 3;
 var water = 3;
 var hasHorse = false;
@@ -30,13 +30,15 @@ function setScene() {
 
 	if (currentScene == 1) {
 		$('#scene_text').text(
-		'Welcome adventurer! You have chosen by the elder council to help our community. ' +
-		'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water. ' +
-		'Our ancestors were not that wise to use water cautiously and now we have very little left. ' + 
-		'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water. ' + 
-		'We are begging you to search for new water resources and for tools and data that might help to construct water treatment infrastructure. ' + 
-		'But please hurry! We are running out of water!'
+			'Welcome adventurer! You have chosen by the elder council to help our community. ' +
+			'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water. ' +
+			'Our ancestors were not that wise to use water cautiously and now we have very little left. ' + 
+			'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water. ' + 
+			'We are begging you to search for new water resources and for tools and data that might help to construct water treatment infrastructure. ' + 
+			'But please hurry! We are running out of water!'
 		);
+
+		$('#scene_image').attr('src', './images/greeting.png');
 
 		$('#button1').show();
 		$('#button1').text('I will gladly serve our society!');
@@ -54,6 +56,8 @@ function setScene() {
 			'It seems to be exhasted and starving, you can see its rib bones under skin.'
 		);
 
+		$('#scene_image').attr('src', './images/praire.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Help the horse, feed it and give some water.');
 		$('#button2').show();
@@ -69,6 +73,8 @@ function setScene() {
 			'It seem quite happy, even trying to run around. ' +
 			'You now you noticed that there is no bridle and no sign of its wearing on cheecks and tooth.'
 		);
+
+		$('#scene_image').attr('src', './images/praire.jpg');
 
 		$('#button1').show();
 		$('#button1').text('I saved this horse, so it mine now.');
@@ -105,6 +111,8 @@ function setScene() {
 			'A serpent-like mutant ambushes you.'
 		);
 
+		$('#scene_image').attr('src', './images/serpent.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Fight. Mutants must die!');
 		$('#button2').show();
@@ -120,6 +128,8 @@ function setScene() {
 			'You turn around to find your horse collapsed - the acid rain was too much for this poor being.' + 
 			'Would you like to try and help the horse?.'
 		);
+
+		$('#scene_image').attr('src', './images/horse_laying.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Help the horse.');
@@ -137,6 +147,8 @@ function setScene() {
 			'Would you like tu bury the corpse?'
 		);
 
+		$('#scene_image').attr('src', './images/horse_laying.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Yes, that will be a human act.');
 		$('#button2').show();
@@ -153,6 +165,8 @@ function setScene() {
 			'You notice a bush of Klyukva, a rare and tasty berry.'
 		);
 
+		$('#scene_image').attr('src', './images/klyukva.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Collect it to refill food resources.');
 		$('#button2').show();
@@ -167,6 +181,8 @@ function setScene() {
 			'A blink of light not far away catches you attention. You followed the bling to find a pare of glasses on the ground, ' +
 			'and a corpse of a man in lab coat neaby.'
 		);
+
+		$('#scene_image').attr('src', './images/glasses.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Burry the corpse and mark the grave.');
@@ -183,6 +199,8 @@ function setScene() {
 			'You were surrounded by outlaws. This are harsh men of the wastelands, they only value brute force and water.'
 		);
 
+		$('#scene_image').attr('src', './images/praire.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Try to escape.');
 		$('#button2').show();
@@ -197,6 +215,8 @@ function setScene() {
 			'You lost the fight and was heavily beaten. Now you can find the foorptints of outlaws on the ground. ' + 
 			'Would you like to return to follow them and take revenge?'
 		);
+
+		$('#scene_image').attr('src', './images/praire.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Follow and take revenge.');
@@ -213,6 +233,8 @@ function setScene() {
 			'You are walking and takling about different subjects now. Do you want to tell him of your quest, too?'
 		);
 
+		$('#scene_image').attr('src', './images/praire.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Keep silence. No one can be trusted in the wastelands, moreover those kind to you.');
 		$('#button2').show();
@@ -226,6 +248,8 @@ function setScene() {
 		$('#scene_text').text(
 			'You made a small campfire. The Ranger is offered some of his food to you. Do you also like to offer some food?'
 		);
+
+		$('#scene_image').attr('src', './images/campfire.gif');
 
 		$('#button1').show();
 		$('#button1').text('Keep your food. You have long journey to go still.');
@@ -242,6 +266,8 @@ function setScene() {
 			+ 'He promises to show something really valuable for you.'
 		);
 
+		$('#scene_image').attr('src', './images/mountains_prophet.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Follow. This man may have something really interesting.');
 		$('#button2').show();
@@ -255,6 +281,8 @@ function setScene() {
 		$('#scene_text').text(
 			'You arrived at widow\'s house. She is outside, struggling to collect some apricots from a big tree. '
 		);
+
+		$('#scene_image').attr('src', './images/widow.png');
 
 		$('#button1').show();
 		$('#button1').text('Help her.');
@@ -271,6 +299,8 @@ function setScene() {
 			+ 'Will you tell widow about your encounter with scientist corpse?'
 		);
 
+		$('#scene_image').attr('src', './images/widow.png');
+
 		$('#button1').show();
 		$('#button1').text('Yes.');
 		$('#button2').show();
@@ -284,6 +314,8 @@ function setScene() {
 		$('#scene_text').text(
 			'Something seems suspicious with the scientist corpse you left behind. Do you want to return to it?'
 		);
+
+		$('#scene_image').attr('src', './images/glasses.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Yes.');
@@ -323,6 +355,8 @@ function setScene() {
 			text
 		);
 
+		$('#scene_image').attr('src', './images/glasses.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Continue.');
 		$('#button2').hide();
@@ -333,13 +367,16 @@ function setScene() {
 
 	if (currentScene == 21) {
 		$('#scene_text').text(
-			'You see the '
+			'Irritated by the footprints near the scientist corpse, you proceed cautiously. ' +
+			'Not far from your home you notice the renger standing their and nervously gazing at the road.'
 		);
+
+		$('#scene_image').attr('src', './images/greeting.png');
 
 		$('#button1').show();
 		$('#button1').text('This is suspicious. Try and kill ranger by throwing a knife.');
 		$('#button2').show();
-		$('#button1').text('Great ranger.');
+		$('#button2').text('Greet ranger.');
 		$('#button3').hide();
 	}
 
@@ -349,6 +386,8 @@ function setScene() {
 		$('#scene_text').text(
 			'It was not easy to bury the horse. You tired a lot and consumed some extra food and water.'
 		);
+
+		$('#scene_image').attr('src', './images/horse_laying.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Continue.');
@@ -365,6 +404,8 @@ function setScene() {
 			'and delivery routes for water.'
 		);
 
+		$('#scene_image').attr('src', './images/glasses.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Continue.');
 		$('#button2').hide();
@@ -379,6 +420,8 @@ function setScene() {
 			'There was no one alive at the camp - they all died from tasting the Klyukva berries which appear to absorb the poison from acid rain.'
 		);
 
+		$('#scene_image').attr('src', './images/outlaw_camp.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Continue.');
 		$('#button2').hide();
@@ -391,6 +434,8 @@ function setScene() {
 		$('#scene_text').text(
 			'Ranger is pleased by your kind act. It return he tells you of a prophet and a widow that leave in the highlands and can be of help.'
 		);
+
+		$('#scene_image').attr('src', './images/campfire.gif');
 
 		$('#button1').show();
 		$('#button1').text('Continue.');
@@ -405,6 +450,8 @@ function setScene() {
 			'You part ways with ranger next day. After some wondering, you found springs and return to your people glad of yourself.'
 		);
 
+		$('#scene_image').attr('src', './images/waterfall.gif');
+
 		$('#button1').show();
 		$('#button1').text('Continue.');
 		$('#button2').hide();
@@ -417,6 +464,8 @@ function setScene() {
 		$('#scene_text').text(
 			'You watched as widow was collecting her fruits. Afterwards, widow do not respond to your attempts of communication.'
 		);
+
+		$('#scene_image').attr('src', './images/widow.png');
 
 		$('#button1').show();
 		$('#button1').text('Continue.');
@@ -431,6 +480,8 @@ function setScene() {
 			'Widow is pleased by your act of respect to her late husband. She grants you with book about water treatment technology.'
 		);
 
+		$('#scene_image').attr('src', './images/widow.png');
+
 		$('#button1').show();
 		$('#button1').text('Continue.');
 		$('#button2').hide();
@@ -443,6 +494,8 @@ function setScene() {
 		$('#scene_text').text(
 			'Widow is angread that you did not bury her husband. You retreated from her house, ashamed.'
 		);
+
+		$('#scene_image').attr('src', './images/widow.png');
 
 		$('#button1').show();
 		$('#button1').text('Continue.');
@@ -459,6 +512,8 @@ function setScene() {
 			'Sooner or later, your or your children\'s lifes will go literally dry. ' +
 			'So enjoy your water while you have it.'
 		);
+
+		$('#scene_image').attr('src', './images/greeting.png');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -498,6 +553,8 @@ function setScene() {
 			text
 		);
 
+		$('#scene_image').attr('src', './images/greeting.png');
+
 		$('#button1').show();
 		$('#button1').text('Replay.');
 		$('#button2').hide();
@@ -512,6 +569,8 @@ function setScene() {
 			'You tried your best, but the serpent was faster and it was able to bite you grievously. ' +
 			'You died knowing that not only you failed your people, but also your corpse will digest in serpent\'s stomach for a month. '
 		);
+
+		$('#scene_image').attr('src', './images/serpent.jpg');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -530,6 +589,8 @@ function setScene() {
 			'Ravaging from dissapointment, they killed you.'
 		);
 
+		$('#scene_image').attr('src', './images/murdered.png');
+
 		$('#button1').show();
 		$('#button1').text('Replay.');
 		$('#button2').hide();
@@ -545,6 +606,8 @@ function setScene() {
 			'To their displease, they did not found water, their main interest. ' +
 			'Ravaging from dissapointment, they killed you.'
 		);
+
+		$('#scene_image').attr('src', './images/murdered.png');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -562,6 +625,8 @@ function setScene() {
 			'You where noticed by camp watchman and shot down. '
 		);
 
+		$('#scene_image').attr('src', './images/outlaw_camp.jpg');
+
 		$('#button1').show();
 		$('#button1').text('Replay.');
 		$('#button2').hide();
@@ -576,6 +641,8 @@ function setScene() {
 			'"You did not pass my probation", The Prophet said, "So I will lock you here." ' +
 			'You wondered the maze until you starved to the death.'
 		);
+
+		$('#scene_image').attr('src', './images/maze.png');
 
 		$('#button1').show();
 		$('#button1').text('Replay.');
@@ -594,6 +661,8 @@ function setScene() {
 			'Last thing you ever seen and heared in this world was ranger, collecting stuff you found and murmuring something about world domination through control of water'
 		);
 
+		$('#scene_image').attr('src', './images/murdered.png');
+
 		$('#button1').show();
 		$('#button1').text('Replay.');
 		$('#button2').hide();
@@ -609,6 +678,8 @@ function setScene() {
 			'Last thing you ever seen and heared in this world was ranger, collecting stuff you found and murmuring something about world domination through control of water'
 		);
 
+		$('#scene_image').attr('src', './images/murdered.png');
+
 		$('#button1').show();
 		$('#button1').text('Replay.');
 		$('#button2').hide();
@@ -623,10 +694,28 @@ function setScene() {
 			'"You did pass my probation", The Prophet said, "So I will award you with this time capsule. Take it to your elders, it contains valuable information."'
 		);
 
+		$('#scene_image').attr('src', './images/maze.png');
+
 		$('#button1').show();
 		$('#button1').text('Proceed.');
 		$('#button2').hide();
 		$('#button3').hide();		
+	}
+
+	// GAME OUTCOME FOR SHOOTING, SCENE 301
+
+	if (currentScene == 301) {
+		$('#scene_text').text(
+			'You have killed the renger. ' +
+			'Whatever his real intentions were, your road is surely safe now.'
+		);
+
+		$('#scene_image').attr('src', './images/maze.png');
+
+		$('#button1').show();
+		$('#button1').text('Proceed.');
+		$('#button2').hide();
+		$('#button3').hide();
 	}
 
 	// GAME PREPHASE
@@ -635,8 +724,10 @@ function setScene() {
 		$('#scene_text').text(
 			'You wake up laying on a stone floor in some kind of maze. ' + 
 			'The Prophet\'s voice announces that the exit from maze will be shut down soon and you need to get out as soon as you can if you want his help on your quest. ' +
-			'Use your keyboard arrows to direct in the maze. You will have 60 seconds to escape it.'
+			'Use your keyboard arrows to direct in the maze. You will have 90 seconds to escape it.'
 		);
+
+		$('#scene_image').attr('src', './images/maze.png');
 
 		$('#button1').show();
 		$('#button1').text('Proceed.');
@@ -646,24 +737,15 @@ function setScene() {
 
 	if (currentScene == 401) {
 		$('#scene_text').text(
-			'This minigame is in development. We suppose you won.'
+			'Press space button when you want to throw the knife. You have three chances.'
 		);
+
+		$('#scene_image').attr('src', './images/greeting.png');
 
 		$('#button1').show();
 		$('#button1').text('Proceed.');
 		$('#button2').hide();
-		$('#button3').hide();		
-	}
-
-	if (currentScene == 402) {
-		$('#scene_text').text(
-			'This minigame is in development. We suppose you won.'
-		);
-
-		$('#button1').show();
-		$('#button1').text('Proceed.');
-		$('#button2').hide();
-		$('#button3').hide();		
+		$('#button3').hide();
 	}
 }
 
@@ -888,7 +970,8 @@ function onChoice(button) {
 
 	else if (currentScene == 17) {
 		if (button == 'button1') {
-			currentScene = 401;
+			waterResource = true;
+			currentScene = 18;
 		} else if (button == 'button2') {
 			currentScene = 27;
 		}
@@ -921,10 +1004,14 @@ function onChoice(button) {
 	// SCENE 20
 
 	else if (currentScene == 20) {
-		if (suspectsRanger) {
-			currentScene = 21;
+		if (toldStory) {
+			if (suspectsRanger) {
+				currentScene = 21;
+			} else {
+				currentScene = 205;
+			}
 		} else {
-			currentScene = 205;
+			currentScene = 101;
 		}
 	}
 
@@ -932,7 +1019,7 @@ function onChoice(button) {
 
 	else if (currentScene == 21) {
 		if (button == 'button1') {
-			// TODO: Put Minigame
+			currentScene = 401;
 		} else if (button == 'button2') {
 			currentScene = 206;
 		}
@@ -978,17 +1065,16 @@ function onChoice(button) {
 	}
 
 	else if (currentScene == 401) {
-		waterResource = true;
-		currentScene = 18;
-	}
-
-	else if (currentScene == 402) {
-		currentScene = 101;
+		startShooting();
 	}
 
 	else if (currentScene == 300) {
 		timeCapsule = true;
 		currentScene = 17;
+	}
+
+	else if (currentScene == 301) {
+		currentScene = 101;
 	}
 
 	// Replay Scenes

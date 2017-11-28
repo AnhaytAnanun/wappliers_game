@@ -1,14 +1,14 @@
-function apricotLoaded() {
-	var canvas = document.getElementById('apricot_element');
+var rengerLocation = 15;
+var bulletLocation = 0;
+var rengerReversed = false;
+var isShooting = false;
+
+function shootingLoaded() {
+	var canvas = document.getElementById('shooting_element');
 	var context = canvas.getContext('2d');
 
-	var rengerLocation = 15;
-	var bulletLocation = 0;
-	var rengerReversed = false;
-	var isShooting = false;
-
-	var contextWidth = 1500;
-	var contextHeight = 500;
+	var contextWidth = 750;
+	var contextHeight = 200;
 
 	var tic = setInterval(animate, 5);
 
@@ -25,22 +25,22 @@ function apricotLoaded() {
 			rengerLocation++;
 		}
 
-		if (rengerLocation == 485) {
+		if (rengerLocation == contextHeight - 15) {
 			rengerReversed = true;
 		}
 
 		if (isShooting) {
-			bulletLocation = bulletLocation + 2;
+			bulletLocation = bulletLocation + 4;
 		}
 
-		if (bulletLocation == contextWidth) {
-			console.log(rengerLocation + 15, rengerLocation - 15);
+		if (bulletLocation > contextWidth && isShooting) {
+			isShooting = false;
 
 			if (contextHeight / 2 < rengerLocation + 15
 				&& contextHeight / 2 > rengerLocation - 15) {
-				alert('Won');
+				shootingWon();
 			} else {
-				alert('Missed');
+				shootingMissed();
 			}
 		}
 	}
@@ -53,17 +53,17 @@ function apricotLoaded() {
 	function drawCanvas() {
 		context.beginPath();
 		context.rect(0, 0, contextWidth, contextHeight);
-		context.fillStyle = 'blue';
+		context.fillStyle = '#000515';
 		context.fill();
 
 		context.beginPath();
 		context.rect(0, rengerLocation - 15, 10, 30);
-		context.fillStyle = 'black';
+		context.fillStyle = 'white';
 		context.fill();
 
 		context.beginPath();
 		context.rect(contextWidth - bulletLocation - 8, contextHeight / 2 - 4, 8, 8);
-		context.fillStyle = 'black';
+		context.fillStyle = 'white';
 		context.fill();
 	}
 
@@ -74,4 +74,9 @@ function apricotLoaded() {
 	    	isShooting = true;
 	  	}
 	});
+}
+
+function resetShooting() {
+	isShooting = false;
+	bulletLocation = 0;
 }
