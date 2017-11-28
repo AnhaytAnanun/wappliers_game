@@ -30,7 +30,7 @@ function setScene() {
 
 	if (currentScene == 1) {
 		$('#scene_text').text(
-			'Welcome adventurer! You have chosen by the elder council to help our community. ' +
+			'Welcome adventurer! You have been chosen by the elder council to help our community. ' +
 			'Years have passed since apocalypse, and our society is struggling for survival. One of our most important issues is water. ' +
 			'Our ancestors were not that wise to use water cautiously and now we have very little left. ' + 
 			'Besides there is no specialist on water treatment that had survived, so we cannot use contaminated water. ' + 
