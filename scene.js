@@ -178,25 +178,25 @@ function setScene() {
 
 	if (currentScene == 9) {
 		$('#scene_text').text(
-			'A blink of light not far away catched you attention. You followed the blink to find a pare of glasses on the ground, ' +
-			'and a corpse of a man in lab coat nearby.'
+			'You notice a quick flash of light, not too far away. You begin walking towards the light and find a pair of glasses on the ground, ' +
+			'and a corpse of a man in lab coat neaby.'
 		);
 
 		$('#scene_image').attr('src', './images/glasses.jpg');
 
 		$('#button1').show();
-		$('#button1').text('Burry the corpse and mark the grave.');
+		$('#button1').text('Burry the corpse, mark the grave, and pay your respects.');
 		$('#button2').show();
 		$('#button2').text('Just bury the corpse.');
 		$('#button3').show();
-		$('#button3').text('Leave it as is.');
+		$('#button3').text('Leave the body as it is.');
 	}
 
 	// SCENE 10
 
 	if (currentScene == 10) {
 		$('#scene_text').text(
-			'You were surrounded by outlaws. These are harsh men of the wastelands, they only value brute force and water.'
+			'You are suddenly surrounded by the Outlaws of the Wastelands, the wild, violent group of lawless men whose only means of survival is violence and water.'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
@@ -204,7 +204,7 @@ function setScene() {
 		$('#button1').show();
 		$('#button1').text('Try to escape.');
 		$('#button2').show();
-		$('#button2').text('Fight them.');
+		$('#button2').text('Fight the outlaws.');
 		$('#button3').hide();
 	}
 
@@ -212,8 +212,8 @@ function setScene() {
 
 	if (currentScene == 11) {
 		$('#scene_text').text(
-			'You lost the fight and was heavily beaten. Now you can find the foorptints of outlaws on the ground. ' + 
-			'Would you like to follow them and take revenge?'
+			'You lose the fight and was beaten up very badly. However, you remember that you have the ability to track the Outlaws of the Wastelands and figure out where they live. ' + 
+			'Would you like to return to follow them and take revenge?'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
@@ -229,16 +229,16 @@ function setScene() {
 
 	if (currentScene == 12) {
 		$('#scene_text').text(
-			'After encounter with outlaws, you got lost. Hopefuly you met a ranger that agreees to help you.' +
-			'You are walking and takling about different subjects now. Do you want to tell him of your quest, too?'
+			'After your encounter with the Outlaws, you got lost and run into a stranger to help.' +
+			'The stranger is very helpful and knows everything about the land . Do you want to tell him of your quest, too?'
 		);
 
 		$('#scene_image').attr('src', './images/praire.jpg');
 
 		$('#button1').show();
-		$('#button1').text('Keep silence. No one can be trusted in the wastelands, moreover those who are kind to you.');
+		$('#button1').text('Keep silent. No one can be trusted in the wastelands, even if they are kind to you.');
 		$('#button2').show();
-		$('#button2').text('Tell story. This man is kind to you, after all.');
+		$('#button2').text('Tell your story. He seems like a nice guy.');
 		$('#button3').hide();
 	}
 
@@ -246,15 +246,15 @@ function setScene() {
 
 	if (currentScene == 13) {
 		$('#scene_text').text(
-			'You made a small campfire. The Ranger is offering some of his food to you. Do you also like to offer some food?'
+			'You make a small campfire and the Ranger offers to share his meal. Do you want to share your food as well?'
 		);
 
 		$('#scene_image').attr('src', './images/campfire.gif');
 
 		$('#button1').show();
-		$('#button1').text('Keep your food. You have long journey to go still.');
+		$('#button1').text('Keep your food, you have long journey ahead.');
 		$('#button2').show();
-		$('#button2').text('Offer food.');
+		$('#button2').text('Offer to share your food.');
 		$('#button3').hide();
 	}
 
@@ -262,16 +262,16 @@ function setScene() {
 
 	if (currentScene == 16) {
 		$('#scene_text').text(
-			'You found prophet\'s cave high in the mountains. He greets you by name and asks if you would like to take a tour into deep of the cave. '
-			+ 'He promises to show something really valuable to you.'
+			'You found a prophet\'s cave high in the mountains. He personally greets you and asks if you would like to join him on a walk through the Deep Caves. '
+			+ 'He insists, promising to show you something that could be very helpful.'
 		);
 
 		$('#scene_image').attr('src', './images/mountains_prophet.jpg');
 
 		$('#button1').show();
-		$('#button1').text('Follow. This man may have something really interesting.');
+		$('#button1').text('Follow. This man may have something I need.');
 		$('#button2').show();
-		$('#button2').text('Leave prophet\'s cave. You can\'t risk your life by trusting some madman.');
+		$('#button2').text('Leave the prophet\'s cave. You can\'t risk your life by trusting some madman.');
 		$('#button3').hide();
 	}
 
@@ -295,9 +295,8 @@ function setScene() {
 
 	if (currentScene == 18) {
 		$('#scene_text').text(
-			'Widow is pleased by your act and tells you location of secret springs she takes water from. ' +
-			'She also asks if you would like to rest at her house. You gladly accept. Inside, you notice a bloody lab coat hanging on a chair. ' +
-			'Will you tell widow about your encounter with scientist corpse?'
+			'The widow is pleased by your act of kindness and tells you the location of the Secret Springs she uses for drinking water. She also asks if you would like to rest at her house. You gladly accept. Inside, you notice a lab coat drenched with blood hanging over a chair. '
+			+ 'Do you want to tell the widow about your encounter with scientists corpse?'
 		);
 
 		$('#scene_image').attr('src', './images/widow.png');
@@ -313,7 +312,7 @@ function setScene() {
 
 	if (currentScene == 19) {
 		$('#scene_text').text(
-			'Something seems suspicious with the scientist corpse you left behind. Do you want to return to it?'
+			'You suddenly have a bad feeling about leaving the scientists corpse behind. Do you want to return to it?'
 		);
 
 		$('#scene_image').attr('src', './images/glasses.jpg');
